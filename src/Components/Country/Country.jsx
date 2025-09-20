@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Country.css'
 
-const Country = ({country}) => {
+const Country = ({country, handleVisitedCountries}) => {
 
     const [visited, setVisited] = useState(false);
 
@@ -16,6 +16,7 @@ const Country = ({country}) => {
         // setVisited(visited ? false : true);
 
         setVisited(!visited);
+        handleVisitedCountries(country);
 
     }
     
